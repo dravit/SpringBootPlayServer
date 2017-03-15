@@ -1,0 +1,9 @@
+com\play\global\DBRepository.class
+com\play\services\CoachService.class
+com\play\repositories\CoachRepository.class
+com\play\services\CoachServiceImpl.class
+com\play\objects\Coach.class
+com\play\controller\LoginController.class
+com\play\controller\RegistrationController.class
+com\play\global\DatabaseConfig.class
+com\play\starter\AppConfig.class
