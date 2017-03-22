@@ -5,7 +5,7 @@ import org.springframework.data.annotation.Id;
 /**
  * Created by dgup27 on 3/15/2017.
  */
-final public class Coach {
+public class Coach {
 
     @Id
     private String id;
