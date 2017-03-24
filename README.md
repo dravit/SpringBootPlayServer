@@ -28,3 +28,10 @@ To run Application :
 
 mvn clean spring-boot:run
 
+Install MongoDb as a service
+
+mkdir D:\MongoDB\log
+mkdir D:\MongoDB\db
+Create a mongod.cfg file in C:\Program Files\MongoDB\Server\3.4 folder with contents as mentioned in attached file.
+cd "C:\Program Files\MongoDB\Server\3.4\bin"
+mongod.exe --config "C:\Program Files\MongoDB\Server\3.4\mongod.cfg" --install
