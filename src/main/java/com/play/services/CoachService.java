@@ -10,5 +10,7 @@ public interface CoachService {
 
     Coach findById(String id);
 
+    Coach findByCoach(Coach coach);
+
     Coach save(Coach coach);
 }

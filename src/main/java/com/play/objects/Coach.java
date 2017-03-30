@@ -1,20 +1,21 @@
 package com.play.objects;
 
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.data.annotation.Id;
 
 /**
  * Created by dgup27 on 3/15/2017.
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Coach {
 
     @Id
     private String id;
-
-    private String name;
-
-    private String email;
-
-    private String mobile;
+    private CoachDetails coachDetails;
+    private String loginEmail;
+    private String loginNumber;
+    private String googleDisplayName;
 
     public String getId() {
         return id;
@@ -24,27 +25,35 @@ public class Coach {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getLoginEmail() {
+        return loginEmail;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setLoginEmail(String loginEmail) {
+        this.loginEmail = loginEmail;
     }
 
-    public String getEmail() {
-        return email;
+    public String getLoginNumber() {
+        return loginNumber;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setLoginNumber(String loginNumber) {
+        this.loginNumber = loginNumber;
     }
 
-    public String getMobile() {
-        return mobile;
+    public CoachDetails getCoachDetails() {
+        return coachDetails;
     }
 
-    public void setMobile(String mobile) {
-        this.mobile = mobile;
+    public void setCoachDetails(CoachDetails coachDetails) {
+        this.coachDetails = coachDetails;
+    }
+
+    public String getGoogleDisplayName() {
+        return googleDisplayName;
+    }
+
+    public void setGoogleDisplayName(String googleDisplayName) {
+        this.googleDisplayName = googleDisplayName;
     }
 }

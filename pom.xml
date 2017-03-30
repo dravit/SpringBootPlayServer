@@ -16,6 +16,8 @@
         <start-class>com.play.starter.AppConfig</start-class>
     </properties>
 
+    <packaging>jar</packaging>
+
     <!-- Inherit defaults from Spring Boot -->
     <parent>
         <groupId>org.springframework.boot</groupId>
