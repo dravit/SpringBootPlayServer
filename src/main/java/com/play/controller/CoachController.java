@@ -1,6 +1,7 @@
 package com.play.controller;
 
 import com.play.objects.Coach;
+import com.play.objects.CoachDetails;
 import com.play.services.CoachService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -47,10 +48,16 @@ public class CoachController {
         }
     }
 
-    @RequestMapping(value = "/updateCoachDetails", method = RequestMethod.PUT)
+    @RequestMapping(value = "/updateCoachDetails", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.CREATED)
     Coach updateCoachDetails(@RequestBody @Valid Coach coach) {
         System.out.println("coach>>>>>>>>>."+coach.getId());
+        CoachDetails coachDetails = coach.getCoachDetails();
+        if(coachDetails != null) {
+            System.out.println(coachDetails.getCoachName());
+        } else {
+            System.out.println("Coachdetail is null");
+        }
         return coachService.save(coach);
     }
 }
